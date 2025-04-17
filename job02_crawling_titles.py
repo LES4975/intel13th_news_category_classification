@@ -59,7 +59,7 @@ button_xpath = '//*[@id="newsct"]/div[4]/div/div[2]/a' # '기사 더보기' 버�
 for i in range(15): # 15번 반복
     time.sleep(0.5) # 약간의 시간 딜레이
     driver.find_element(By.XPATH, button_xpath).click() # 설정한 경로의 버튼을 클릭
-time.sleep(5) # 5초 기다리기
+time.sleep(1) # 1초 기다리기
 
 titles = []
 
@@ -90,11 +90,10 @@ button_xpath = '//*[@id="newsct"]/div[5]/div/div[2]/a' # '기사 더보기' 버�
 for i in range(15): # 15번 반복
     time.sleep(0.5) # 약간의 시간 딜레이
     driver.find_element(By.XPATH, button_xpath).click() # 설정한 경로의 버튼을 클릭
-time.sleep(5) # 5초 기다리기
+time.sleep(1) # 1초 기다리기
 
 for i in range(1, 6): # 5회
     for j in range(1, 7): # 1부터 6까지
-        # title path: //*[@id="newsct"]/div[5]/div/div[1]/div[1]/ul/li[1]/div/div/div[2]/a/strong
         title_path = '//*[@id="newsct"]/div[5]/div/div[1]/div[{}]/ul/li[{}]/div/div/div[2]/a/strong'.format(i, j)
         try: # 해당 경로가 없을 수도 있으니까 예외 처리를 위한 try-except 문
             title = driver.find_element(By.XPATH, title_path).text # 요소 찾기.text
