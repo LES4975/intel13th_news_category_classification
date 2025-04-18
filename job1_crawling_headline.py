@@ -4,7 +4,7 @@ import re
 import pandas as pd
 import datetime
 
-category = ['Politics', 'Economic', 'Social', 'Culture', 'World', 'IT']
+category = ['Politiccs', 'Economic', 'Social', 'Culture', 'World', 'IT']
 df_titles = pd.DataFrame()
 
 # url = 'https://news.naver.com/section/100' # 네이버 뉴스의 [정치] 섹션 URL

@@ -28,7 +28,7 @@ model.add(LSTM(64, activation='tanh')) # 보통 마지막 LSTM 레이어에는 r
 model.add(Dropout(0.3))
 model.add(Flatten()) # 평활화
 model.add(Dense(128, activation='relu'))
-model.add(Dense(6, activation='softmax'))
+model.add(Dense(6, activation='softmax')) # 출력
 model.summary()
 
 model.compile(loss='categorical_crossentropy', optimizer='adam',
